@@ -29,11 +29,30 @@ d8training.node_list_show:
  requirements:
    _permission: 'access content'
 
-d8training.node_list_three:
 
+d8training.node_list_three:
  path: "/listthree/{node}"
  defaults:
     # What's being returned is the entire response (not HTML, or even if HTML, we don't want additional blocks around it), so use _controller instead of _content.
    _controller: 'Drupal\d8training\Controller\NodelistingController::contentshowthree'
  requirements:
    _permission: 'access content'
+
+
+d8training.simple_form:
+ path: "/simple-form"
+ defaults:
+    # What's being returned is the entire response (not HTML, or even if HTML, we don't want additional blocks around it), so use _controller instead of _content.
+   _form: 'Drupal\d8training\Form\SimpleForm'
+   _title: 'Test form'
+ requirements:
+   _permission: 'access content'
+
+d8training.admin_form:
+ path: "/admin/config/d8-training"
+ defaults:
+    # What's being returned is the entire response (not HTML, or even if HTML, we don't want additional blocks around it), so use _controller instead of _content.
+   _form: 'Drupal\d8training\Form\D8tSettingsForm'
+   _title: 'D8 training form'
+ requirements:
+   _permission: 'administer site configuration'
