@@ -1,0 +1,5 @@
+services:
+  _query_site_id_check:
+    class: Drupal\d8training\NodelistingQueryCheckAccess
+    tags:
+      - { name: access_check, applies_to: _query_site_id_check }
