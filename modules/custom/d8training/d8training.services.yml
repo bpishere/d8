@@ -7,3 +7,12 @@ services:
   d8training.form_manager:
     class: Drupal\d8training\FormManager
     arguments: ['@database']
+
+  d8training.open_weather_forecaster:
+      class: Drupal\d8training\OpenWeatherForecaster
+      arguments: ['@config.factory', '@http_client']
+
+  d8training.event_manager:
+      class: Drupal\d8training\EventSubscriber\EventManager
+      tags:
+        - { name: event_subscriber}

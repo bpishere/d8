@@ -1,0 +1,7 @@
+weather_widget:
+  css:
+    theme:
+      assets/css/d8training.css: {}
+
+  js:
+    assets/js/d8training.js: {}
