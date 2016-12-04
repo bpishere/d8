@@ -7,7 +7,7 @@ services:
   d8training.form_manager:
     class: Drupal\d8training\FormManager
     arguments: ['@database']
-
+## Use arguments to use other services
   d8training.open_weather_forecaster:
       class: Drupal\d8training\OpenWeatherForecaster
       arguments: ['@config.factory', '@http_client']

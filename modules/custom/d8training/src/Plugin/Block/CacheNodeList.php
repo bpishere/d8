@@ -59,11 +59,11 @@ class CacheNodeList extends BlockBase implements  ContainerFactoryPluginInterfac
         '#type' => 'markup',
         '#markup' => implode("<br/>", $rows) .'user -' . $mail,
         '#cache' => array(
-            'tags'=>$cache_tags,
-            'contexts' => array('user')
+            'tags'=>$cache_tags,  /// Adding cache tags to invalidate this custom block cache during update of these nodes
+            'contexts' => array('user') // Adding cache context to invalidate cache during adding or removing new nodes.
         )
 
-      //'#attach' =>
+      //'#attach' =>  //
     );
   }
 

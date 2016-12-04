@@ -12,6 +12,7 @@ use Drupal\d8training\FormManager;
 
 class SimpleForm extends FormBase
 {
+  // Simple form using FormMangaer services..
   private $formMgr;
 
   public function __construct(FormManager $formMgr)

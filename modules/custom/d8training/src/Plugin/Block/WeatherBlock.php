@@ -92,5 +92,4 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface
   {
     $this->configuration['city_name'] = $form_state->getValue('city_name');
   }
-
 }

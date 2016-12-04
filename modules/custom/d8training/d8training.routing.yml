@@ -1,5 +1,3 @@
-
-
 d8training.node_list_one:
  path: "tab/list/tab1"
  defaults:
@@ -16,19 +14,15 @@ d8training.node_list_two:
    _controller: 'Drupal\d8training\Controller\NodelistingController::contenttabtwo'
  requirements:
    _query_site_id_check: 'TRUE'
-
-
-
+### To use custom acccess call back
 
 d8training.node_list_show:
-
  path: "/listshow/{arg}"
  defaults:
     # What's being returned is the entire response (not HTML, or even if HTML, we don't want additional blocks around it), so use _controller instead of _content.
    _controller: 'Drupal\d8training\Controller\NodelistingController::contentshowtwo'
  requirements:
    _permission: 'access content'
-
 
 d8training.node_list_three:
  path: "/listthree/{node}"
